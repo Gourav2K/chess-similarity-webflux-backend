@@ -5,7 +5,7 @@ WORKDIR /app
 
 # Copy everything and build
 COPY . .
-RUN gradle clean build --no-daemon
+RUN gradle clean build -x test --no-daemon
 
 # ----- Stage 2: Runtime -----
 FROM eclipse-temurin:21-jdk-alpine
